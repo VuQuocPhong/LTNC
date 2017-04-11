@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int n;
+	std::cin >> n;
+	int arr_check[n+1];
+	int num;
+	for (int i = 1; i <= n; ++i) arr_check[i] = 0;
+	for (int i = 1; i <= n; ++i) {
+		std::cin >> num;
+		if (arr_check[num] == 0) arr_check[num] = num;
+		else {
+			std::cout << "Yes";
+			return -1;
+		}
+	}
+	std::cout << "No";
+	return 0;
+}
